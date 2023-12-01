@@ -1,0 +1,267 @@
+.home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  background-image: url('/image4.png'); /* Chemin vers votre image de fond pour le bouton */
+  background-color: rgb(167, 22, 128, 0.5);
+  border-color : rgb(0, 0, 0);
+  background-size: contain; /* Ajuster la taille de l'image */
+  width: 155px; /* Largeur du bouton */
+  height: 155px; /* Hauteur du bouton */
+}
+.home-button:hover {
+  background-color: rgb(251, 186, 0, 0.8);  /* Fond semi-transparent */
+  border-color : rgb(0, 0, 0);
+}
+
+
+.fullscreen-yellow {
+  background-color: yellow !important;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.fullscreen-winner {
+  position: fixed;
+  top: 100;
+  left: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(251, 186, 0, 0.8);  /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8em; /* Taille du texte agrandi */
+  z-index: 9999; /* Assure que le message apparaît au-dessus de tout */
+}
+
+.btn-primary {
+  border-radius: 250px; /* les bordures */
+  padding: 5px 75px;/* un rond */
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(167, 22, 128);
+  color: rgb(242, 208, 198);
+  border-color : rgb(167, 22, 128);
+  margin: 50px; /* Ajout d'espace entre les boutons */
+  animation: anim 1s forwards linear;
+}
+
+/* Ajout de styles spécifiques au deuxième bouton */
+
+.btn-primary:hover {
+  cursor: pointer;
+  background-color:rgb(251, 186,0,  0.3); 
+  color: rgb(167, 22, 128); ;
+  border-color : rgb(251, 186,0,  0.6); 
+}
+
+
+.btn-second {
+  border-radius: 250px; /* les bordures */
+  padding: 5px 75px;/* un rond */
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgb(251, 186, 0); 
+  color: rgb(167, 22, 128); ;
+  margin: 50px; /* Ajout d'espace entre les boutons */
+  animation: anim 1s forwards linear;
+}
+/* Ajout de styles spécifiques au deuxième bouton */
+.btn-second:hover {
+  background:rgb(167, 22, 128, 0.6); 
+  color: rgb(242, 208, 198);
+}
+
+h1 
+{
+  position: relative;
+  z-index: 1;
+  border-radius: 25px; /* les bordures */
+  padding: 5px 75px;/* un rond */
+  font-size: 10vh;
+  background:rgb(167, 22, 128); 
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  
+  /* transition: all 1s ease-in-out; */
+  animation: anim 1s forwards linear;
+
+}
+h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 10vh;
+}
+
+@keyframes anim {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* container position */
+.containerMain{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#block_0,
+#block_1,
+#block_2 {
+  border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+  border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+  border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+  border-right: none;
+}
+.occupied:hover {
+  background: #371616;
+}
+.play-area /*Les grilles */
+{
+  background:rgb(0, 0, 0, 0.3); 
+  border: 7px solid rgba(167, 22, 128);
+  display: grid;
+  width: 70vmin;
+  height: 70vmin;
+  margin: px;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  animation: anim 1s forwards linear;
+
+}
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: bold;
+  border: 3px solid rgba(167, 22, 128);
+  color : rgb(255, 244, 252);
+}
+
+.block:hover {
+  cursor: pointer;
+  background: rgba(167, 22, 128, 0.6);
+  color: white;
+}
+
+button:hover {
+  cursor: pointer; /* le cursor changer de tete :) */
+  background-color: rgb(167, 22, 128); /* le remplissage de "REJOUER"*/ 
+  color: rgb(255, 255, 255); /* lorsqu'on passe dessus la couleur du texte change*/
+  transition: background-color 0.2s ease-in-out;
+}
+button {
+  outline: none;
+  border-radius: 250px; /* les bordures */
+  padding: 20px 75px;/* un rond */
+  font-weight: bold;
+  font-size: 5vh;
+  background-color:rgb(251, 186, 0); 
+  color: rgb(0, 0, 0);
+  transition: background-color 0.2s ease-in-out;
+  animation: anim 1s forwards linear;
+
+}
+
+
+/* winner colour */
+
+.win-block{
+  background:  rgb(251, 186, 0, 0.5);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 36px;
+  overflow: hidden; cursor: pointer;
+  border: 2px solid #fcfcfc; border-radius: 20px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #222;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #222;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
