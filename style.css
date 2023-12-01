@@ -3,7 +3,7 @@
   top: 20px;
   left: 20px;
   z-index: 9999;
-  background-image: url('/image4.png'); /* Chemin vers votre image de fond pour le bouton */
+  background-image: url('https://github.com/sidlef/tictactoe/blob/main/image4.png?raw=true'); /* Chemin vers votre image de fond pour le bouton */
   background-color: rgb(167, 22, 128, 0.5);
   border-color : rgb(0, 0, 0);
   background-size: contain; /* Ajuster la taille de l'image */
