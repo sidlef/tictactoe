@@ -84,7 +84,7 @@ function AIMove() {
       if (result === 'tie') {
       gameOver = true;
       } else {
-        winnerDisplay.textContent = `Le joueur ${result} a gagné !`;
+        winnerDisplay.textContent = `L'ordinateur a gagné !`;
         winnerDisplay.style.fontSize = '80px';
         winnerDisplay.style.color = 'back';
         winnerDisplay.style.fontFamily = 'Arial, sans-serif';
