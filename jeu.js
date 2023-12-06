@@ -89,10 +89,7 @@ function AIMove() {
         winnerDisplay.style.color = 'back';
         winnerDisplay.style.fontFamily = 'Arial, sans-serif';
         winnerDisplay.classList.add('fullscreen-winner');
-        setTimeout(() => {
-            winnerDisplay.classList.remove('fullscreen-winner'); // Retirer la classe après 5 secondes
-            winnerDisplay.textContent = ``; 
-          }, 1700);
+        
       }
       gameOver = true;
     }
